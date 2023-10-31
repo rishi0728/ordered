@@ -1,4 +1,7 @@
 import Foundation
+
+
+
 struct Time: Comparable, Hashable {
     var hour: Int
     var minute: Int
@@ -52,26 +55,56 @@ class Collection {
 let collection = Collection()
 
 let order1 = Order(orderId: "O1", entryTime: Time(hour: 10, minute: 15))
+
+
 let order2 = Order(orderId: "O2", entryTime: Time(hour: 10, minute: 15))
+
+
 let order3 = Order(orderId: "O3", entryTime: Time(hour: 10, minute: 15))
+
 let order4 = Order(orderId: "O4", entryTime: Time(hour: 9, minute: 15))
+
+
 let order5 = Order(orderId: "O7", entryTime: Time(hour: 12, minute: 30))
+
+
 let order6 = Order(orderId: "O12", entryTime: Time(hour: 7, minute: 30))
+
+
 let order7 = Order(orderId: "O314", entryTime: Time(hour: 7, minute: 24))
 
+
 collection.addOrder(order: order1)
+
+
 collection.addOrder(order: order2)
+
+
 collection.addOrder(order: order3)
+
+
 collection.addOrder(order: order4)
+
+
 collection.addOrder(order: order5)
+
+
 collection.addOrder(order: order6)
+
+
 collection.addOrder(order: order7)
 
 let startTime = Time(hour: 9, minute: 20)
+
+
 let endTime = Time(hour: 10, minute: 16)
 
 let ordersFromCollection = collection.search(startTime: startTime, endTime: endTime)
 
 for order in ordersFromCollection {
+
+
     print("Order ID: \(order.orderId), Entry Time: \(order.entryTime.hour):\(order.entryTime.minute)")
+
+
 }
